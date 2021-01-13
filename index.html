@@ -1,34 +1,69 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+<html lang="en">
+
 <head>
-<title>Test Form</title>
+    <meta charset="utf-8">
+    <title>GameLoop Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="HTML5 GameLoop Template">
+    <meta name="author" content="UI Programming">
+
+    <!--StyleSheet-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/push.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
 </head>
+
 <body>
+    <canvas id="the_canvas" width="800" height="800" style="border: black 1px solid;">
+        Oops! looks like your browser does not support canvas tag
+    </canvas>
 
-<form action="https://www.google.com" method="GET" target="_blank">
+    <h1 id="HUD" onload="weaponselection()"></h1>
 
-<input type="text" name="q" value="pwa">
+    <table>
+        <tbody>
+            <tr>
+                <td>&nbsp;</td>
+                <td><button id="buttonUp" class="button yellow round">Y</button></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td><button id="buttonLeft" class="button blue round">X</button></td>
+                <td>&nbsp;</td>
+                
+                <td><button id="buttonRight"  class="button red round">B</button></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><button  id="buttonDown" class="button green round">A</button></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <div class="custom-select" style="width:200px;">
+                        <select id="equipment" onchange="weaponSelection()">
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <label class="switch">
+                        <input id="active" onclick="weaponSelection()" type="checkbox">
+                        <span class="toggle"></span>
+                    </label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
-<input type="text" name="username" value="mary">
-
-<input type="password" name="password" value="12345"><br>
-
-<input type="radio" name="enemy" value="npc">NPC<br>
-<input type="radio" name="enemy" value="boss">Boss<br>
-
-<input type="hidden" name="wallet" value="mary">
-
-<select name="enemy_colour">
-	<option value="red">Red</option>
-    <option value="green">Green</option>
-    <option value="blue">Blue</option>
-</select>
-<br>
-
-<button type="reset">Reset</button>
-<button type="submit">Send info</button>
-
-</form>
 
 </body>
+
+<!--JavaScript File-->
+<script src="./js/script.js"></script>
+
 </html>
