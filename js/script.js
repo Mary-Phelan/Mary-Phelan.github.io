@@ -17,6 +17,13 @@ function GamerInput(input) {
     this.action = input;
 }
 
+// log the URL the page request came from
+function onPageLoad() {
+
+    var href = window.location.href;
+
+}
+
 // get a handle to the canvas context
 var canvas = document.getElementById("the_canvas");
 
@@ -101,29 +108,24 @@ function drawHealthbar() {
 
 
 
-function buttonOnClickUp()
-{
+function buttonOnClickUp() {
     gamerInput = new GamerInput("Up");
     console.log("Up");
 }
 
-function buttonOnClickLeft()
-{
+function buttonOnClickLeft() {
     gamerInput = new GamerInput("Left");
 }
 
-function buttonOnClickDown()
-{
+function buttonOnClickDown() {
     gamerInput = new GamerInput("Down");
 }
 
-function buttonOnClickRight()
-{
+function buttonOnClickRight() {
     gamerInput = new GamerInput("Right");
 }
 
-function buttonNotPressed()
-{
+function buttonNotPressed() {
     gamerInput = new GamerInput("None");
     console.log("Action Stopped")
 }
