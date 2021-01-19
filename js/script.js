@@ -22,6 +22,19 @@ function onPageLoad() {
 
     var href = window.location.href;
 
+    var protocol = window.location.protocol;
+    alert(protocol);
+   
+    var host = window.location.host;
+    alert(host);
+   
+   
+    var pathname = window.location.pathname;
+    alert(pathname);
+   
+    var search = window.location.search;
+    alert(search);
+
 }
 
 // get a handle to the canvas context
