@@ -16,6 +16,21 @@
 
 </head>
 
+<body>
+
+<button onclick="splitFunction()">Split String</button>
+
+<p id="demo"></p>
+
+    <script>
+        function splitFunction() {
+            var url = document.location.href;
+            var result = str.split("="); // Splits string based on =
+            alert(result[0]);
+            alert(result[1]);
+          }
+    </script> 
+
     <canvas id="the_canvas" width="800" height="800" style="border: black 1px solid;">
         Oops! looks like your browser does not support canvas tag
     </canvas>
