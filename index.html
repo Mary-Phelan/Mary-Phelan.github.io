@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 
 <head>
@@ -10,88 +9,27 @@
     <meta name="author" content="UI Programming">
 
     <!--StyleSheet-->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/push.css">
+    <link rel="stylesheet" href="./css/buttons.css">
     <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
 
-    <script>
-        function onPageLoad() {
-            var href = window.location.href;
-            alert(href);
-
-            var protocol = window.location.protocol;
-            alert(protocol);
-
-            var host = window.location.host;
-            alert(host);
-
-
-            var pathname = window.location.pathname;
-            alert(pathname);
-
-            var search = window.location.search;
-            alert(search);
-        }
-    </script>
 </head>
 
-<body onload="onPageLoad()">
-    <h1>Enter Gamertag:</h1>
+<body>
 
-    <form action="https://mary-phelan.github.io" method="get">
-        <input type="text" name="gamertag">
-        <button type="submit">Submit</button>
-    </form>
+<form action="https://mary-phelan.github.io/game/" method="GET" target="_blank">
 
-    <canvas id="the_canvas" width="800" height="800" style="border: black 1px solid;">
-        Oops! looks like your browser does not support canvas tag
-    </canvas>
+<input type="text" name="displayname" value="Enter Displayname">
 
-    <h1 id="HUD" onload="weaponselection()"></h1>
+<input type="text" name="username" value="Enter Username">
 
-    </form>
+<input type="password" name="password" value="Enter password">
 
-    <table>
-        <tbody>
-            <tr>
-                <td>&nbsp;</td>
-                <td><button id="buttonUp" class="button yellow round">Y</button></td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td><button id="buttonLeft" class="button blue round">X</button></td>
-                <td>&nbsp;</td>
-
-                <td><button id="buttonRight" class="button red round">B</button></td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td><button id="buttonDown" class="button green round">A</button></td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td colspan="3" align="center">
-                    <div class="custom-select" style="width:200px;">
-                        <select id="equipment" onchange="weaponSelection()">
-                        </select>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3" align="center">
-                    <label class="switch">
-                        <input id="active" onclick="weaponSelection()" type="checkbox">
-                        <span class="toggle"></span>
-                    </label>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
+<button type="reset">Reset</button>
+<button type="submit">Log in</button>
 
 </body>
 
-<!--JavaScript File-->
-<script src="./js/script.js"></script>
+    <!--JavaScript File-->
+    <script src="./js/script.js"></script>
 
 </html>
