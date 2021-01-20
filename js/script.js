@@ -38,12 +38,6 @@ function onPageLoad() {
 
 }
 
-function splitFunction() {
-    var str = "?gamer_tag=Phil";
-    var result = str.split("="); // Splits string based on =
-    alert(result[0]);
-    alert(result[1]);
-  }
 
 // get a handle to the canvas context
 var canvas = document.getElementById("the_canvas");
