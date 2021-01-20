@@ -17,6 +17,13 @@ function GamerInput(input) {
     this.action = input;
 }
 
+function splitFunction() {
+    var url = document.location.href
+    var splitUrl = url.split("=");// Splits string based on = 
+    alert(result[3]);
+    alert(result[4]);
+  }
+
 // log the URL the page request came from
 function onPageLoad() {
 
