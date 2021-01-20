@@ -21,8 +21,29 @@ function GamerInput(input) {
 function onPageLoad() {
 
     var href = window.location.href;
+    alert(protocol);
+
+    var protocol = window.location.protocol;
+    alert(protocol);
+   
+    var host = window.location.host;
+    alert(host);
+   
+   
+    var pathname = window.location.pathname;
+    alert(pathname);
+   
+    var search = window.location.search;
+    alert(search);
 
 }
+
+function splitFunction() {
+    var str = "?gamer_tag=Phil";
+    var result = str.split("="); // Splits string based on =
+    alert(result[0]);
+    alert(result[1]);
+  }
 
 // get a handle to the canvas context
 var canvas = document.getElementById("the_canvas");
