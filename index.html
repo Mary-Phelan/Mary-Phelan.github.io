@@ -11,24 +11,42 @@
     <!--StyleSheet-->
     <link rel="stylesheet" href="./css/buttons.css">
     <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
-    <!--JavaScript File-->
-    <script src="./js/script.js"></script>
+    
+    <script>
+
+        function ValidateForm()
+        {
+            var x = document.forms["helloform"]["name"].value;
+
+            if(x=="")
+            {
+                alert("I need to know your name");
+                return false;
+            }
+            else
+            {
+                alert("Hello there " + document.forms["helloform"]["name"].value);
+            }
+        }
+
+    </script>
+
 </head>
 
 <body>  
 
-<form action="https://mary-phelan.github.io/game" method="GET" target="_blank">
+    <form action="https://Mary-phelan.github.io/game" method="GET" target="_blank">
 
-<input type="text" name="displayname" value="Enter Displayname">
 
-<input type="text" name="username" value="Enter Username">
-
-<input type="password" name="password" value="Enter password">
-
-<button type="reset">Reset</button>
-<button type="submit">Log in</button>
+        <form name="helloform" action="." onsubmit="return ValidateForm()" method="get">
+            Username: <input type="text" name="name">
+        
+        
+            <input type="submit" value="Submit">
+        </form>
 
 </body>
 
-
+<!--JavaScript File-->
+<script src="./js/script.js"></script>
 </html>

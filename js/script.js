@@ -17,12 +17,20 @@ function GamerInput(input) {
     this.action = input;
 }
 
+var pageURL=document.location.href;
+var gamerTag;
+
 function splitFunction() {
-    var url = document.location.href
-    var splitUrl = url.split("=");// Splits string based on = 
-    alert(result[3]);
-    alert(result[4]);
+
+    var result = pageURL.split("=");
+    gamerTag = result[1];
   }
+splitFunction();
+
+var string1 = "username: ";
+var string2 = gamerTag;
+var username = string1.concat(string2);
+context.font="10 px Arial";
 
 // log the URL the page request came from
 function onPageLoad() {
