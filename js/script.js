@@ -17,15 +17,7 @@ function GamerInput(input) {
     this.action = input;
 }
 
-var pageURL=document.location.href;
-var gamerTag;
 
-function splitFunction() {
-
-    var url = document.location.href;
-    var result = pageURL.split("=");
-    document.getElementById("gamerTag").innerHTML = "Welcome" + result[1];
-  }
 
 // log the URL the page request came from
 function onPageLoad() {
@@ -204,6 +196,12 @@ function input(event) {
     console.log("Gamer Input :" + gamerInput.action);
 }
 
+function splitFunction() {
+
+    var url = document.location.href;
+    var result = pageURL.split("=");
+    document.getElementById("gamerTag").innerHTML = "Welcome" + result[1];
+  }
 
 
 // When button is clicked boom appears
