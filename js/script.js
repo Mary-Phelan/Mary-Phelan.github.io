@@ -197,7 +197,6 @@ function input(event) {
 }
 
 function splitFunction() {
-
     var url = document.location.href;
     var result = pageURL.split("=");
     document.getElementById("gamerTag").innerHTML = "Welcome" + result[1];
