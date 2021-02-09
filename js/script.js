@@ -103,7 +103,7 @@ for (var i = 0; i < options.length; i++) {
     selectBox.options.add(new Option(option.text, option.value, option.selected));
 }
 
-// local storage position
+// local storage position X
     function updatePositionX() {
     var current_positionx = localStorage.getItem('xPosition');
   
@@ -113,6 +113,7 @@ for (var i = 0; i < options.length; i++) {
   
   }
 
+  // local storage postion Y
   function updatePositionY() {
     var current_positiony = localStorage.getItem('yPosition');
   
