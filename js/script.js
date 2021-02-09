@@ -95,11 +95,11 @@ for (var i = 0; i < options.length; i++) {
 function updateWeapon() {
     var current_weapon = localStorage.getItem('weapon');
   
-    if (current_weapon == "No Weapon") {
-      localStorage.setItem('weapon', "No Weapon");
+    if (current_weapon == "selected") {
+      localStorage.setItem('weapon', 'Not active');
       document.getElementById("WEAPON").innerHTML = " [ " + current_weapon + " ] ";
     } else {
-      localStorage.setItem('weapon', option.selected);
+      localStorage.setItem('weapon', 'active' );
       document.getElementById("WEAPON").innerHTML = " [ " + current_weapon + " ] ";
     }
   
