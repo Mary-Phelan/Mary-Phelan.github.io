@@ -58,6 +58,8 @@ function weaponSelection() {
         document.getElementById("HUD").innerHTML = selection + " selected ";
         console.log("Weapon Selected");
     }
+    
+    updateWeapon();
 }
 
 
@@ -89,7 +91,19 @@ for (var i = 0; i < options.length; i++) {
     selectBox.options.add(new Option(option.text, option.value, option.selected));
 }
 
-
+// Update the player score
+function updateWeapon() {
+    var current_weapon = localStorage.getItem('weapon');
+  
+    if (isNaN(current_weapon)) {
+      localStorage.setItem('weapon', "No Weapon");
+      document.getElementById("WEAPON").innerHTML = " [ " + current_weapon + " ] ";
+    } else {
+      localStorage.setItem('weapon', parseInt(current_weapon));
+      document.getElementById("WEAPON").innerHTML = " [ " + current_weapon + " ] ";
+    }
+  
+  }
 
 // Setup image
 var image = new Image();
