@@ -99,7 +99,7 @@ function updateWeapon() {
       localStorage.setItem('weapon', "No Weapon");
       document.getElementById("WEAPON").innerHTML = " [ " + current_weapon + " ] ";
     } else {
-      localStorage.setItem('weapon', (current_weapon) + option.selected);
+      localStorage.setItem('weapon', option.selected);
       document.getElementById("WEAPON").innerHTML = " [ " + current_weapon + " ] ";
     }
   
