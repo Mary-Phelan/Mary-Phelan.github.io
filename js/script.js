@@ -7,8 +7,21 @@ function GameObject(name, img, health) {
     this.name = name;
     this.img = img;
     this.health = health;
-    this.x = 0;
-    this.y = 0;
+    this.x = parseInt(localStorage.getItem('xPosition'));
+
+    if(isNaN(this.x))
+    {
+       this.x = 0;
+       localStorage.setItem('xPosition',0);
+    }
+
+    this.y = parseInt(localStorage.getItem('yPosition'));
+
+    if(isNaN(this.y))
+    {
+       this.y = 0;
+       localStorage.setItem('yPosition',0);
+    }
 }
 
 // The GamerInput is an Object that holds the Current
@@ -41,6 +54,7 @@ function onPageLoad() {
 }
 
 
+
 // get a handle to the canvas context
 var canvas = document.getElementById("the_canvas");
 
@@ -58,8 +72,6 @@ function weaponSelection() {
         document.getElementById("HUD").innerHTML = selection + " selected ";
         console.log("Weapon Selected");
     }
-
-    updateWeapon();
 }
 
 
@@ -80,7 +92,7 @@ var options = [{
     },
     {
         "text": "Crossbow",
-        "value": "Crossbow"
+        "value": "Pistol crossbow"
     }
 ];
 
@@ -91,17 +103,22 @@ for (var i = 0; i < options.length; i++) {
     selectBox.options.add(new Option(option.text, option.value, option.selected));
 }
 
-// Update the player score
-function updateWeapon() {
-    var current_weapon = localStorage.getItem('weapon');
+// local storage position
+    function updatePositionX() {
+    var current_positionx = localStorage.getItem('xPosition');
   
-    if (current_weapon == "selected") {
-      localStorage.setItem('weapon', 'Not active');
-      document.getElementById("WEAPON").innerHTML = " [ " + current_weapon + " ] ";
-    } else {
-      localStorage.setItem('weapon', 'active' );
-      document.getElementById("WEAPON").innerHTML = " [ " + current_weapon + " ] ";
-    }
+      
+      document.getElementById("playerXPosition").innerHTML = " [ " + current_positionx + " ] ";
+      localStorage.setItem('xPosition', parseInt(gameobjects[0].x));
+  
+  }
+
+  function updatePositionY() {
+    var current_positiony = localStorage.getItem('yPosition');
+  
+      
+      document.getElementById("playerYPosition").innerHTML = " [ " + current_positiony + " ] ";
+      localStorage.setItem('yPosition', parseInt(gameobjects[0].y));
   
   }
 
@@ -249,6 +266,9 @@ function update() {
         }
 
     }
+
+    updatePositionX();
+    updatePositionY();
 }
 
 var x = 0,
