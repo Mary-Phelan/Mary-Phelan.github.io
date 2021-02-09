@@ -95,7 +95,7 @@ for (var i = 0; i < options.length; i++) {
 function updateWeapon() {
     var current_weapon = localStorage.getItem('weapon');
   
-    if (isNaN(current_weapon)) {
+    if (current_weapon == "No Weapon") {
       localStorage.setItem('weapon', "No Weapon");
       document.getElementById("WEAPON").innerHTML = " [ " + current_weapon + " ] ";
     } else {
