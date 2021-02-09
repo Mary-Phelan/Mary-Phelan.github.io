@@ -58,7 +58,7 @@ function weaponSelection() {
         document.getElementById("HUD").innerHTML = selection + " selected ";
         console.log("Weapon Selected");
     }
-    
+
     updateWeapon();
 }
 
@@ -80,7 +80,7 @@ var options = [{
     },
     {
         "text": "Crossbow",
-        "value": "Pistol crossbow"
+        "value": "Crossbow"
     }
 ];
 
