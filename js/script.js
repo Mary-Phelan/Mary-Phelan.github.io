@@ -228,11 +228,7 @@ function input(event) {
     console.log("Gamer Input :" + gamerInput.action);
 }
 
-function splitFunction() {
-    var url = document.location.href;
-    var result = url.split("=");
-    document.getElementById("gamerTag").innerHTML = "Welcome" + result[1];
-  }
+
 
 
 // When button is clicked boom appears
@@ -318,6 +314,12 @@ function draw() {
 
 }
 
+function splitFunction() {
+    var url = document.location.href;
+    var result = url.split("=");
+    document.getElementById("gamerTag").innerHTML = "Welcome" + result[1];
+  }
+  
 // Initial time set
 var initial = new Date().getTime();
 var current; // current time
