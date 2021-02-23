@@ -1,7 +1,7 @@
 var cacheName = 'maryphelan-pwa';
 var filesToCache = [
   '/',
-  '/index.html',
+  '/game.html',
   '/css/push.css',
   '/js/script.js'
 ];

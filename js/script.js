@@ -314,12 +314,13 @@ function draw() {
 
 }
 
+// splitting the username inputted by the user
 function splitFunction() {
     var url = document.location.href;
     var result = url.split("=");
     document.getElementById("gamerTag").innerHTML = "Welcome" + result[1];
   }
-  
+
 // Initial time set
 var initial = new Date().getTime();
 var current; // current time
