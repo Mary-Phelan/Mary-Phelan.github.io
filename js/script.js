@@ -230,7 +230,7 @@ function input(event) {
 
 function splitFunction() {
     var url = document.location.href;
-    var result = pageURL.split("=");
+    var result = url.split("=");
     document.getElementById("gamerTag").innerHTML = "Welcome" + result[1];
   }
 
