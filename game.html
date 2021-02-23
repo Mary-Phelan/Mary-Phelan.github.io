@@ -92,7 +92,7 @@
           if (this.readyState == 4 && this.status == 200) {
             var objects = JSON.parse(this.responseText);
             //document.getElementById("data").innerHTML = objects.pets[0].name;
-            console.log(Response.Enemies);
+            console.log(objects.Enemies);
           }
         };
         xhttp.open("GET", "./data/level.json", true);
