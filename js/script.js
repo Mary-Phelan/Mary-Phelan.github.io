@@ -7,6 +7,7 @@ function GameObject(name, img, health) {
     this.name = name;
     this.img = img;
     this.health = health;
+    
     this.x = parseInt(localStorage.getItem('xPosition'));
 
     if(isNaN(this.x))
@@ -103,6 +104,7 @@ for (var i = 0; i < options.length; i++) {
     selectBox.options.add(new Option(option.text, option.value, option.selected));
 }
 
+
 // local storage position X
     function updatePositionX() {
     var current_positionx = localStorage.getItem('xPosition');
@@ -122,6 +124,7 @@ for (var i = 0; i < options.length; i++) {
       localStorage.setItem('yPosition', parseInt(gameobjects[0].y));
   
   }
+
 
 // Setup image
 var image = new Image();
