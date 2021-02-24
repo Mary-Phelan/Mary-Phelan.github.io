@@ -321,7 +321,7 @@ function draw() {
 function splitFunction() {
     var url = document.location.href;
     var result = url.split("=");
-    document.getElementById("gamerTag").innerHTML = "Welcome"<br> + result[1];
+    document.getElementById("gamerTag").innerHTML = "Welcome" + result[1];
   }
 
 // Initial time set
